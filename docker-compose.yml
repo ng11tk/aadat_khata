@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  server:
+    build: ./server
+    container_name: khata-server
+    ports:
+      - "4000:4000"
+    networks:
+      - default
+    restart: unless-stopped
+
+  client:
+    build: ./client
+    container_name: khata-client
+    depends_on:
+      - server
+    ports:
+      - "5173:3000"
+    networks:
+      - default
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge
