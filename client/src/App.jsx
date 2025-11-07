@@ -4,7 +4,7 @@ import './App.css'
 import { useState } from 'react'
 
 function App() {
-  const [message, setMessage] = useState('')  
+  const [message, setMessage] = useState('')
   useEffect(() => {
     fetch('http://localhost:4000/api/data')
       .then(response => response.json())
