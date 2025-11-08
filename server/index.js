@@ -18,7 +18,7 @@ const PORT = 4000;
 app.use(express.json());
 
 // a simple route
-app.get("server/api/data", (req, res) => {
+app.get("/server/api/data", (req, res) => {
   res.json({ message: "Welcome to Aadat Khata Server." });
 });
 

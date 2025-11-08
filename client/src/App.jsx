@@ -6,7 +6,7 @@ import { useState } from 'react'
 function App() {
   const [message, setMessage] = useState('')
   useEffect(() => {
-    fetch('server/api/data')
+    fetch('/server/api/data')
       .then(response => response.json())
       .then(data => {
         console.log(data.message)
